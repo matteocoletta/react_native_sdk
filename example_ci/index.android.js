@@ -10,6 +10,8 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
+    ToastAndroid,
+    TextInput,
     View,
     NativeEventEmitter,
 } from 'react-native';
@@ -26,12 +28,14 @@ export default class exampleProject extends Component {
     constructor(props) {
         super(props);
         this.subscription = null;
+        this.state = { text: 'Useless Placeholder', i: 1 };
     }
 
     componentWillMount() {
-        var baseUrl = 'https://10.0.2.2:8443';
+        //var baseUrl = 'https://10.0.2.2:8443';
+        var baseUrl = 'https://jenkins-1.adjust.com:8443';
         Adjust.setTestingMode(baseUrl);
-
+        module_test.setTests("current/Test_Event_Count;current/Test_Event_OrderId;current/Test_Disable_Enable;current/Test_EventBuffering;current/Test_DefaultTracker;current/Test_DelayStart;current/Test_UserAgent;current/Test_SubsessionCount");
         module_test.initTestSession(baseUrl);
 
         const adjustTestEventReceiver = new NativeEventEmitter(NativeModules.AdjustTest);
@@ -43,16 +47,9 @@ export default class exampleProject extends Component {
                 var functionName = commandDict['functionName'];
                 var params = commandDict['params'];
 
-                console.log('>>>>>>>>>> className: ' + className);
-                console.log('>>>>>>>>>> functionName: ' + functionName);
-                console.log('>>>>>>>>>> params: ' + params);
-
-                //for (var key in params) {
-                    //if (params.hasOwnProperty(key)) {
-                        //var value = params[key];
-                        //console.log(`key is ${key} and value is ${value}`);
-                    //}
-                //}
+                //console.log('>>>>>>>>>> className: ' + className);
+                //console.log('>>>>>>>>>> functionName: ' + functionName);
+                //console.log('>>>>>>>>>> params: ' + params);
 
                 commandExecutor.executeCommand(className, functionName, params);
             });
@@ -66,19 +63,13 @@ export default class exampleProject extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit index.android.js
-                </Text>
-                <Text style={styles.instructions}>
-                    Double tap R on your keyboard to reload,{'\n'}
-                    Shake or press menu button for dev menu
+                    I'm here
                 </Text>
             </View>
             );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -91,12 +82,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
+    }
 });
 
 AppRegistry.registerComponent('Example', () => exampleProject);
