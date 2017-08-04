@@ -38,7 +38,7 @@ public class AdjustTest extends ReactContextBaseJavaModule {
                 && !this.selectedTests.isEmpty()) {
             testLibrary.setTests(this.selectedTests);
                 }
-        testLibrary.initTestSession("react_native4.11.3@android4.11.4");
+        testLibrary.initTestSession("react_native4.11.4@android4.11.4");
     }
 
     @ReactMethod
