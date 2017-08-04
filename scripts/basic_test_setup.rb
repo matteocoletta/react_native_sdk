@@ -29,18 +29,26 @@ class BasicTestSetup < Test::Unit::TestCase
 
         # Start the driver
         @driver = Appium::Driver.new(desired_capabilities).start_driver
-    end
-
-    def wait_for(seconds)
-        Selenium::WebDriver::Wait.new(timeout: seconds).until { yield }
+        @wait = Selenium::WebDriver::Wait.new :timeout => 20 
     end
 
     # test method names must start with "test_"
     # to be recognized by the test-unit framework
     def test_login
-        puts 'WAITING...'
-        sleep 300
-        #wait_for(20) { @driver.find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.TextView[1]").attribute('visibility') == 'visible' }
+        puts 'START'
+
+        #for i in 1..5 do
+        #puts "#{i*30} seconds passed"
+        #sleep 30
+        #@driver.page_source.include? 'Pineapples'
+        #end
+
+        #puts 'waiting for bulbasaur to be displayed'
+        #@wait.until{ text('bulbasaur').displayed?}
+
+        puts 'waiting for bulbasaur to be displayed 2'
+        @wait.until{ find_exact('bulbasaur').displayed?}
+
         puts 'DONE'
     end
 

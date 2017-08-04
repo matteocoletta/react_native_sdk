@@ -8,7 +8,11 @@ function upload {
 
 function runTestScript {
     echo '[*] runTestScript(): ENTER'
-    bundle exec ruby basic_test_setup.rb
+    cd ~/dev/Testobject-junit
+    #gradle clean -Dtest.single=BasicTest testMethod
+    gradle clean test
+
+    #bundle exec ruby basic_test_setup.rb
     echo '[*] runTestScript(): EXIT'
 }
 
@@ -16,4 +20,4 @@ function runTestScript {
 cd $(dirname $0) 
 ./makeproject
 upload
-runTestScript
+#runTestScript

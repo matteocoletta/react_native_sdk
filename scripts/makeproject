@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Exit if any errors occur
-#set -e
+set -e
 
 # Get the current directory (/scripts/ directory)
 SDK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
