@@ -4,7 +4,8 @@
 
 USERNAME=abdullahobaied
 API_KEY=76DE22AF894C45C2B522B715E541FCF1
-TEST_SUITE_ID=13
+TEST_SUITE_ID_ONE=13
+TEST_SUITE_ID_TWO=21
 UPLOAD_APK_ENDPOINT=https://app.testobject.com:443/api/storage/upload
 UPDATE_APK_ENDPOINT=https://app.testobject.com/api/rest/v2/appium/suites
 
@@ -12,24 +13,32 @@ function upload {
     echo '[*] Uploading...'
     UPDATED_APP_VERSION_ID=$(curl -u "${USERNAME}:${API_KEY}" -X POST ${UPLOAD_APK_ENDPOINT} -H "Content-Type: application/octet-stream" --data-binary @app.apk)
     echo '[*] Upload complete'
-
-    echo "[*] Updating app to version ${UPDATED_APP_VERSION_ID}"
-    curl -u "${API_KEY}:" -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d "{\"appVersionId\": ${UPDATED_APP_VERSION_ID}}" "${UPDATE_APK_ENDPOINT}/${TEST_SUITE_ID}"
-    echo '[*] Update complete'
 }
 
 function runTestScript {
     echo '[*] runTestScript(): ENTER'
-    cd ~/dev/Testobject-junit
-    #gradle clean -Dtest.single=BasicTest testMethod
-    gradle clean test
+    cd Testobject-junit
 
-    #bundle exec ruby basic_test_setup.rb
+    echo "[*] Updating app to version ${UPDATED_APP_VERSION_ID}"
+    curl -u "${API_KEY}:" -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d "{\"appVersionId\": ${UPDATED_APP_VERSION_ID}}" "${UPDATE_APK_ENDPOINT}/${TEST_SUITE_ID_ONE}"
+    echo '[*] Update complete'
+
+    echo '[*] runTestScript(): Running test one'
+    mvn -Dtest=TestOne test
+
+
+    echo "[*] Updating app to version ${UPDATED_APP_VERSION_ID}"
+    curl -u "${API_KEY}:" -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d "{\"appVersionId\": ${UPDATED_APP_VERSION_ID}}" "${UPDATE_APK_ENDPOINT}/${TEST_SUITE_ID_TWO}"
+    echo '[*] Update complete'
+
+    echo '[*] runTestScript(): Running test two'
+    mvn -Dtest=TestTwo test
+
     echo '[*] runTestScript(): EXIT'
 }
 
 ## Entry point
 cd $(dirname $0) 
-./makeproject
+#./makeproject
 upload
-#runTestScript
+runTestScript
