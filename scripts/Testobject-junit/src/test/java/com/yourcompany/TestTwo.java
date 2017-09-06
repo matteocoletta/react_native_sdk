@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 import org.openqa.selenium.OutputType;
 
-@TestObject(testObjectApiKey = "76DE22AF894C45C2B522B715E541FCF1", testObjectSuiteId = 21)
+@TestObject(testObjectApiKey = "8A0ADA9A4BA04E5BA900B31EE81D7D6A", testObjectSuiteId = 8)
 @RunWith(TestObjectAppiumSuite.class)
 public class TestTwo{
     @Rule
