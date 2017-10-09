@@ -35,7 +35,6 @@ export default class exampleProject extends Component {
         //var baseUrl = 'https://10.0.2.2:8443';
         var baseUrl = 'https://jenkins-1.adjust.com:8443';
         Adjust.setTestingMode(baseUrl);
-        module_test.setTests("current/Test_Event_Count;current/Test_Event_OrderId;current/Test_Disable_Enable;current/Test_EventBuffering;current/Test_DefaultTracker;current/Test_DelayStart;current/Test_UserAgent");
         module_test.initTestSession(baseUrl);
 
         const adjustTestEventReceiver = new NativeEventEmitter(NativeModules.AdjustTest);
