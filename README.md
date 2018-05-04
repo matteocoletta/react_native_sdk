@@ -6,7 +6,7 @@ This is the React Native SDK of Adjust™. You can read more about Adjust™ at 
 
 * [Example app](#example-app)
 * [Basic integration](#basic-integration)
-   * [Get the SDK](#sdk-get)
+   * [Add the SDK to your project](#sdk-get)
    * [Integrate the SDK into your app](#sdk-integrate)
    * [Adjust logging](#sdk-logging)
    * [Adjust project settings](#adjust-project-settings)
