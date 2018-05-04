@@ -57,7 +57,7 @@ There is an example app inside the [`example` directory][example].
 
 We will describe the steps to integrate the Adjust SDK into your React Native project. You can use any text editor or IDE for React Native development. There are no assumptions made regarding development environment.
 
-### <a id="sdk-get"></a>Get the SDK
+### <a id="sdk-get"></a>Add the SDK to your project
 
 First, download the library from `npm`:
 
