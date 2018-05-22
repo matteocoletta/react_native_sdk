@@ -2,7 +2,9 @@
 
 This is the React Native SDK of adjust™. You can read more about adjust™ at [adjust.com].
 
-## Table of contents
+---
+
+### Quick Start
 
 * [Example app](#example-app)
 * [Basic integration](#basic-integration)
