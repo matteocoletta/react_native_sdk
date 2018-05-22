@@ -1,6 +1,6 @@
 ## Summary
 
-This is the React Native SDK of Adjust™. You can read more about Adjust™ at [adjust.com].
+This is the React Native SDK of adjust™. You can read more about adjust™ at [adjust.com].
 
 ## Table of contents
 
