@@ -8,48 +8,63 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
 
    * [Example app](#example-app)
    * [Getting Started](#getting-started)
-   * [Add the SDK to your project](#sdk-add)
-   * [Integrate the SDK into your app](#sdk-integrate)
-   * [Adjust logging](#sdk-logging)
-   * [Adjust project settings](#adjust-project-settings)
-      * [Android permissions](#android-permissions)
-      * [Google Play Services](#android-gps)
-      * [Proguard settings](#android-proguard)
-      * [Install referrer](#android-referrer)
-         * [Google Play Referrer API](#android-referrer-gpr-api)
-         * [Google Play Store intent](#android-referrer-gps-intent)
-      * [iOS frameworks](#ios-frameworks)
-* [Additional features](#additional-features)
+     * [Add the SDK to your project](#sdk-add)
+     * [Adjust project settings](#adjust-project-settings)
+        * [Android permissions](#android-permissions)
+        * [Google Play Services](#android-gps)
+        * [Proguard settings](#android-proguard)
+        * [Install referrer](#android-referrer)
+          * [Google Play Referrer API](#android-referrer-gpr-api)
+          * [Google Play Store intent](#android-referrer-gps-intent)
+        * [iOS frameworks](#ios-frameworks)
+     * [Integrate the SDK into your app](#sdk-integrate)
+     * [Adjust logging](#sdk-logging)
+     * [SDK signature](#sdk-signature)
+     
+### Deep linking 
+  
+   * [Deep linking](#deeplinking)
+     * [Standard deep linking](#deeplinking-standard)
+     * [Deferred deep linking](#deeplinking-deferred)
+     * [Reattribution via deep links](#deeplinking-reattribution)
+    
+### Event Tracking
+
    * [Event tracking](#event-tracking)
-      * [Revenue tracking](#revenue-tracking)
-      * [Revenue deduplication](#revenue-deduplication)
-      * [In-app purchase verification](#iap-verification)
-      * [Callback parameters](#callback-parameters)
-      * [Partner parameters](#partner-parameters)
-    * [Session parameters](#session-parameters)
+     * [Revenue tracking](#revenue-tracking)
+     * [Revenue deduplication](#revenue-deduplication)
+     * [In-app purchase verification](#iap-verification)
+     
+### Custom Parameters
+
+   * [Event Parameters](#event-parameters)
+     * [Event callback parameters](#callback-parameters)
+     * [Event partner parameters](#partner-parameters)
+   * [Session parameters](#session-parameters)
       * [Session callback parameters](#session-callback-parameters)
       * [Session partner parameters](#session-partner-parameters)
-      * [Delay start](#delay-start)
-    * [Attribution callback](#attribution-callback)
-    * [Session and event callbacks](#session-event-callbacks)
-    * [Disable tracking](#disable-tracking)
-    * [Offline mode](#offline-mode)
-    * [Event buffering](#event-buffering)
-    * [SDK signature](#sdk-signature)
-    * [Background tracking](#background-tracking)
-    * [Device IDs](#device-ids)
-      * [iOS advertising identifier](#di-idfa)
-      * [Google Play Services advertising identifier](#di-gps-adid)
-      * [Amazon advertising identifier](#di-fire-adid)
-      * [Adjust device identifier](#di-adid)
-    * [Push token](#push-token)
-    * [Track additional device identifiers](#track-additional-ids)
-    * [Pre-installed trackers](#pre-installed-trackers)
-    * [Deep linking](#deeplinking)
-      * [Standard deep linking](#deeplinking-standard)
-      * [Deferred deep linking](#deeplinking-deferred)
-      * [Reattribution via deep links](#deeplinking-reattribution)
-* [License](#license)
+   * [Delay start](#delay-start)
+   
+### Additional Features
+
+   * [Push token (Uninstall/Reinstall tracking)](#push-token)
+   * [Attribution callback](#attribution-callback)  
+   * [Event and session callbacks](#event-session-callbacks)
+   * [Device IDs](#device-ids)
+     * [iOS advertising identifier](#di-idfa)
+     * [Google Play Services advertising identifier](#di-gps-adid)
+     * [Amazon advertising identifier](#di-fire-adid)
+     * [Adjust device identifier](#di-adid)
+   * [Track additional device identifiers](#track-additional-ids)
+   * [Pre-installed trackers](#pre-installed-trackers)
+   * [Event buffering](#event-buffering)
+   * [Background tracking](#background-tracking)
+   * [Offline mode](#offline-mode)
+   * [Disable tracking](#disable-tracking)
+
+   * [License](#license)
+   
+---
 
 ## <a id="example-app"></a>Example app
 
