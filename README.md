@@ -6,8 +6,8 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
 
 ### Quick Start
 
-* [Example app](#example-app)
-* [Basic integration](#basic-integration)
+   * [Example app](#example-app)
+   * [Getting Started](#getting-started)
    * [Add the SDK to your project](#sdk-add)
    * [Integrate the SDK into your app](#sdk-integrate)
    * [Adjust logging](#sdk-logging)
@@ -55,7 +55,7 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
 
 There is an example app inside the [`example` directory][example].
 
-## <a id="basic-integration"></a>Basic integration
+## <a id="getting-started"></a>Getting Started
 
 We will describe the steps to integrate the Adjust SDK into your React Native project. You can use any text editor or IDE for React Native development. There are no assumptions made regarding development environment.
 
