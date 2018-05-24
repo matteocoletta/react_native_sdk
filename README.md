@@ -64,6 +64,7 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
 
    * [License](#license)
    
+   
 ---
 
 ## <a id="early-steps"></a>Quick Start
