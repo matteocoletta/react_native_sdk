@@ -510,6 +510,8 @@ It should be mentioned that we support a variety of placeholders like `{idfa}` f
 You can read more about using URL callbacks, including a full list of available values, in our
 [callbacks guide][callbacks-guide].
 
+**Note**: **Both** parameters in this method must be **strings**. If either of the passed parameters is not a string, the key-value pair will not be added to the parameters list.
+
 ### <a id="partner-parameters"></a>Event Partner parameters
 
 Similarly to the callback parameters mentioned above, you can also add parameters that Adjust will transmit to the network partners of your choice. You can activate these networks in your Adjust dashboard.
@@ -526,6 +528,8 @@ Adjust.trackEvent(adjustEvent);
 ```
 
 You can read more about special partners and networks in our [guide to special partners][special-partners].
+
+**Note**: **Both** parameters in this method must be **strings**. If either of the passed parameters is not a string, the key-value pair will not be added to the parameters list.
 
 ### <a id="session-parameters"></a>Session parameters
 
@@ -557,6 +561,8 @@ If you wish to remove all key and values from the session callback parameters, y
 Adjust.resetSessionCallbackParameters();
 ```
 
+**Note**: **Both** parameters in this method must be **strings**. If either of the passed parameters is not a string, the key-value pair will not be added to the parameters list.
+
 ### <a id="session-partner-parameters"></a>Session partner parameters
 
 In the same way that there are [session callback parameters](#session-callback-parameters) that are sent for every event or session of the Adjust SDK, there are also session partner parameters.
@@ -582,6 +588,8 @@ If you wish to remove all keys and values from the session partner parameters, y
 ```js
 Adjust.resetSessionPartnerParameters();
 ```
+
+**Note**: **Both** parameters in this method must be **strings**. If either of the passed parameters is not a string, the key-value pair will not be added to the parameters list.
 
 ### <a id="delay-start"></a>Delay start
 
