@@ -61,7 +61,7 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
    * [Background tracking](#background-tracking)
    * [Offline mode](#offline-mode)
    * [Disable tracking](#disable-tracking)
-   * 
+   * [GDPR right to be forgotten](#gdpr-forget-me)
    * [License](#license)
    
    
