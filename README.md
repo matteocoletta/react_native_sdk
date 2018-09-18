@@ -61,6 +61,7 @@ This is the React Native SDK of adjust™. You can read more about adjust™ at 
    * [Background tracking](#background-tracking)
    * [Offline mode](#offline-mode)
    * [Disable tracking](#disable-tracking)
+   * 
    * [License](#license)
    
    
@@ -900,6 +901,13 @@ You can disable the Adjust SDK from tracking by invoking the method `setEnabled`
 ```js
 Adjust.setEnabled(false);
 ```
+
+### <a id="gdpr-forget-me"></a>GDPR right to be forgotten
+ In accordance with article 17 of the EU's General Data Protection Regulation (GDPR), you can notify Adjust when a user has exercised their right to be forgotten. Calling the following method will instruct the Adjust SDK to communicate the user's choice to be forgotten to the Adjust backend:
+ ```js
+Adjust.gdprForgetMe();
+```
+ Upon receiving this information, Adjust will erase the user's data and the Adjust SDK will stop tracking the user. No requests from this device will be sent to Adjust in the future.
 
 You can verify if the Adjust SDK is currently active with the method `isEnabled` of the `Adjust` instance. It is always possible to activate the Adjust SDK by invoking `setEnabled` with the parameter set to `true`.
 
